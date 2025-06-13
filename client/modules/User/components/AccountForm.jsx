@@ -97,7 +97,10 @@ function AccountForm() {
                   {t('AccountForm.EmailSent')}
                 </span>
               ) : (
-                <Button onClick={handleInitiateVerification}>
+                <Button
+                  onClick={handleInitiateVerification}
+                  className="form__resend-button"
+                >
                   {t('AccountForm.Resend')}
                 </Button>
               )}
@@ -173,7 +176,7 @@ function AccountForm() {
             </Field>
           )}
           <Button type="submit" disabled={submitting || invalid}>
-            {t('AccountForm.SubmitSaveAllSettings')}
+            {t('AccountForm.SaveAccountDetails')}
           </Button>
         </form>
       )}
